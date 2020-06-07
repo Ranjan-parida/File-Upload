@@ -1,0 +1,225 @@
+<mvc:View controllerName="com.siemen.controller.File" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns:l="sap.ui.layout.form"
+	xmlns="sap.m">
+	<Label text="File Name"></Label>
+	<u:FileUploader id="idfileUploader" buttonText="" fileType="CSV" placeholder="Choose a CSV file" ></u:FileUploader>
+	<Button text="Upload" press="onUpload"></Button>
+	<!--<Button icon="sap-icon://download" text="Download" press="onDataExport" tooltip="{i18n>download}" id="download"/>-->
+	<Table id="idTable" items="{myFinalResult>/}" updateFinished="onIntExt">
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{myFinalResult>ID}"></Text>
+					<Text text="{myFinalResult>Priority}"></Text>
+					<Text text="{myFinalResult>Reported_by_Name}"></Text>
+					<Text text="{myFinalResult>Reported_by_Depart}"></Text>
+					<Text text="{myFinalResult>Reported_by_GID}"></Text>
+					<Text text="{myFinalResult>Message Processor}"></Text>
+					<Text text="{myFinalResult>Support Team}"></Text>
+					<Text text="{myFinalResult>Last Changed By}"></Text>
+					<!--<Text text="{IRT USage}"></Text>-->
+					<!--<Text text="{IRT Status}"></Text>-->
+					<!--<Text text="{MPT Usage}"></Text>-->
+					<!--<Text text="{MPT Status}"></Text>-->
+					<!--<Text text="{MPT Text}"></Text>-->
+					<!--<Text text="{Last Changed On}"></Text>-->
+					<!--<Text text="{Transaction Type}"></Text>-->
+					<!--<Text text="{Last Changed By}"></Text>-->
+					<!--<Text text="{Category Text}"></Text>-->
+					<!--<Text text="{Category ID}"></Text>-->
+					<!--<Text text="{Ranking}"></Text>-->
+					<!--<Text text="{Substatus}"></Text>-->
+					<!--<Text text="{Lockstatus}"></Text>-->
+					<!--<Text text="{Solution Category}"></Text>-->
+					<!--<Text text="{Service Team}"></Text>-->
+					<Text id="text1" text="{myFinalResult>INT_EXT}"></Text>
+				
+				</cells>
+			</ColumnListItem>
+		</items>
+		<columns>
+			<Column >
+				<header>
+					<Text text="ID"></Text>
+				</header>
+			</Column>
+			<Column >
+				<header>
+					<Text text="Priority"></Text>
+				</header>
+			</Column>
+			<Column >
+				<Text text="Reported_by_Name" ></Text>
+			</Column>
+			<Column >
+				<header>
+					<Text text="Reported_by_Depart"></Text>
+				</header>
+			</Column>
+			<Column >
+				<header>
+					<Text text="Reported_by_GID"></Text>
+				</header>
+			</Column>
+			<Column >
+				<header>
+					<Text text="Message Processor"></Text>
+				</header>
+			</Column>
+			<Column >
+				<header>
+					<Text text="Support Team"></Text>
+				</header>
+			</Column>
+			<Column >
+				<header>
+					<Text text="Last Changed By"></Text>
+				</header>
+			</Column>
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--	<Text text="IRT Usage"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<Text text="IRT Status"></Text>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<Text text="IRT Text"></Text>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<Text text="MPT Usage"></Text>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<Text text="MPT Status"></Text>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<Text text="MPT Text"></Text>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Last Changed on"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Transaction Type"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Last Changed By"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Category Text"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Category ID"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Ranking"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Substatus"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Lock Status"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Solution Category"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Service Team"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="SAP Incident Number"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="SAP Status"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Ext. Reference"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="External Reference No."></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Solution ID"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Created By"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column>-->
+			<!--	<header>-->
+			<!--		<Text text="Urgency"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Impact"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Due By"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="FITS ticket"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Ownership"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="Reported By"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column>-->
+			<!--	<header>-->
+			<!--		<Text text="Contact Person" width="50px"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<!--<Column >-->
+			<!--	<header>-->
+			<!--		<Text text="System ID"></Text>-->
+			<!--	</header>-->
+			<!--</Column>-->
+			<Column >
+				<header>
+					<Text text="INT_EXT"></Text>
+				</header>
+			</Column>
+		</columns>
+	</Table>
+</mvc:View>

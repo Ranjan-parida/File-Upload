@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>FileUpload</title>
+		<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-resourceroots='{"com.siemen": "./"}'
+			data-sap-ui-compatVersion="edge">
+		</script>
+		<script>
+		
+			sap.ui.localResources("fileupload");
+			// var app = new sap.m.App({initialPage:"idFileUpload1"});
+			var page = sap.ui.view({id:"idFileUpload1", 
+                                                viewName:"com.siemen.view.File", 
+                                                type: "XML"});
+			// app.addPage(page);
+			page.placeAt("content");
+			
+		</script>
+	</head>
+	<body class="sapUiBody">
+		<div id="content"></div>
+	</body>
+</html>
